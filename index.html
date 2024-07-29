@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>find the index</title>
+</head>
+<body>
+    <h1>find the index</h1>
+    <input type="text"  id="ins1" placeholder="enter the string value">
+    <input type="text"  id="ins2" placeholder="enter the character">
+    
+    <button  onclick="send()">send</button>
+    <h2 id="show"></h2>
+    <script>
+        function send(){
+        var str=document.getElementById("ins1")
+           str=str.value
+        var  chars=document.getElementById("ins2")
+            chars=chars.value[0]
+            var fn=true;
+            var index=0;
+        for(let i=0; i<str.length;i++){
+            if( chars==str[i]){
+                fn=true;
+                index=i;
+                break;
+            }
+            else{
+                fn=false;
+            }
+        
+        }
+          if(fn==true){
+            document.getElementById("show").innerHTML="index value of" +"  "+chars +"  "+index
+          }
+          else{
+            alert("please enter the valid char value")
+          }
+    }
+    </script>
+    
+</body>
+</html>
